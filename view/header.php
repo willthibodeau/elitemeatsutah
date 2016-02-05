@@ -25,5 +25,5 @@
 			<h3>Login / Signup</h3>
 			<h3><i class="fa fa-opencart fa-align-left"></i></h3>
 
-			<div id="headerCart"><img src="../../eliteMeats/images/cart.png" alt="cart" height="20" width="20"></div>
+			<div id="headerCart"><img src="images/cart.png" alt="cart" height="20" width="20"></div>
 		</header>

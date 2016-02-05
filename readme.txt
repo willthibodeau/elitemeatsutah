@@ -22,7 +22,7 @@ One link that links to the whois information.
 http://www.whois.com/whois/elitemeatsutah.com
 
 Submitted as a Moodle note with Project Description file upload
-https://github.com/willthibodeau/eliteMeats.git
+https://github.com/willthibodeau/elitemeatsutah.git
 
 Database tables
 categories, comments, products, users
