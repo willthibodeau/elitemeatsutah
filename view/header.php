@@ -15,7 +15,7 @@
 		<header>
 			<nav class="clear">
 				<ul>
-					<li><a id="current" href="../index.php">HOME</a></li>
+					<li><a href="../index.php">HOME</a></li>
 					<li><a href="../products/index.php">PRODUCTS</a></li>
 					<li><a href="../admin/index.php">ADMIN</a></li>
 					<li><a href="../Members/index.php">MEMBERS</a></li>
@@ -23,7 +23,5 @@
 			</nav>
 			<h1>Elite Meats</h1>
 			<h3>Login / Signup</h3>
-			<h3><i class="fa fa-opencart fa-align-left"></i></h3>
 
-			<div id="headerCart"><img src="images/cart.png" alt="cart" height="20" width="20"></div>
 		</header>
