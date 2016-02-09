@@ -1,9 +1,27 @@
 <?php
 	include '../view/header.php';
+	require'../model/database.php';
+
+	
+
+	$query = 'SELECT * FROM categories order by cat_categoryID';
+	$statement1 = $db->prepare($query);
+	$statement1->execute();
+	$categories = $statement1->fetchAll();
+	$statement1->closeCursor();
+
 ?>
 	<div class="contentWrapper">
 		<div class="columnWrapper">
 			<article class="main">
+				
+				<ul>
+					<?php foreach($categories as $category) : ?>
+					<li><?php echo $category['cat_categoryID']; ?>
+					<?php echo $category['cat_categoryName']; ?></li><br>
+					
+				<?php endforeach; ?>
+			</ul>
 
 			<h1>Products</h1>
 				<div>

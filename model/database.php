@@ -18,4 +18,3 @@ $debug = true;
 		exit();
 	}
 ?>
-___

@@ -17,7 +17,10 @@
 				<ul>
 					<li><a href="../index.php">HOME</a></li>
 					<li><a href="../products/index.php">PRODUCTS</a></li>
-					<li><a href="../admin/index.php">ADMIN</a></li>
+					<li><a href="../admin/index.php">ADMIN</a>
+						<ul>
+							<li><a href="../admin/add_categories_form.php">Add Categories</a></li>
+						</ul></li>
 					<li><a href="../Members/index.php">MEMBERS</a></li>
 				</ul>
 			</nav>
