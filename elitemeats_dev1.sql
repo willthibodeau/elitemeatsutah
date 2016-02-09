@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `categories`
 --
-
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `cat_categoryID` int(11) NOT NULL,
   `cat_categoryName` varchar(60) NOT NULL
@@ -50,7 +50,7 @@ INSERT INTO `categories` (`cat_categoryID`, `cat_categoryName`) VALUES
 --
 -- Table structure for table `products`
 --
-
+DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
   `prod_productID` int(11) NOT NULL,
   `prod_categoryID` int(11) NOT NULL,

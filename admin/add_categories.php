@@ -1,31 +1,26 @@
 <?php
-// Get the product data
-// $category_id = filter_input(INPUT_POST, 'cat_category_name', FILTER_VALIDATE_INT);
-// $code = filter_input(INPUT_POST, 'code');
-$name = filter_input(INPUT_POST, 'name');
-// $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+    require('../model/database.php');
+    require('../model/functions.php');
+    
 
-// Validate inputs
+// get the value from the form
+$name = filter_input(INPUT_POST, 'name');
+
+
+// Validate the name
  if ( $name == null ) {
      $error = "Please insert a category Name.";
+    
      include'../error.php';
- } else {
-    require_once('../model/database.php');
+ } else if ($name == !null){
+        category_exists($name);
    
-    // Add the product to the database  
-    $query = 'INSERT INTO categories
-                 (cat_categoryID, cat_categoryName)
-              VALUES
-                 (null, :name)';
-    $statement = $db->prepare($query);
-    // $statement->bindValue(':category_id', $category_id);
-    // $statement->bindValue(':code', $code);
-    $statement->bindValue(':name', $name);
-    // $statement->bindValue(':price', $price);
-    $statement->execute();
-    $statement->closeCursor();
+} else {
 
-    // Display the Product List page
-    include('../products/index.php');
+    // Add the category to the database  
+    // add_categories();
+    
+    // Display the Categories
+    include('index.php');
 }
 ?>

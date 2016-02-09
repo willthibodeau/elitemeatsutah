@@ -15,7 +15,7 @@ include'../view/header.php';
             <input type="text" name="name"><br>
 
             
-
+            <input type="hidden" value="add_categories" name="action" />
             <label>&nbsp;</label>
             <input type="submit" value="Add Product"><br>
         </form>

@@ -1,9 +1,46 @@
 <?php
-	include '../view/header.php';
+	require('../model/database.php');
+	require('../model/functions.php');
+	include('../view/header.php');
+
+	$action = filter_input(INPUT_POST, 'action');
+		if($action === NULL){
+			$action = filter_input(INPUT_GET, 'action');
+			if($action === NULL){
+				$action = 'list_categories';
+			}
+		}
+if($action == 'list_categories'){
+	$categories = get_categories();
+	
+} else if ($action == 'add_categories'){
+	$name = filter_input(INPUT_POST, 'name');
+	category_exists($name);
+	add_categories($name);	
+	include('../products/index.php');
+
+} else if ($action == 'delete_categories'){
+
+
+} else {
+
+}
+
 ?>
 	<div class="contentWrapper">
 		<div class="columnWrapper">
 		<article class="main">
+			<table>
+				<tr>
+					<th>Category</th>
+				</tr>
+				<?php foreach ($categories as $category) : ?>
+				<tr>
+					<td><?php echo $category['cat_categoryName']; ?></td>
+				</tr>
+			<?php endforeach; ?>
+		</table>
+<?php echo $message; ?>
 		<h1>Admin</h1>
 			<div>
 				<h2>Account</h2>
