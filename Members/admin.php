@@ -1,11 +1,10 @@
-<?php
-	include '../view/header.php';
-?>
-	<?php require_once("session.php"); ?>
+<?php require_once("session.php"); ?>
 <?php require_once("functions.php"); ?>
 <?php confirm_logged_in(); ?>
 
-<?php $layout_context = "admin"; ?>
+<?php
+  include '../view/header.php';
+?>
 
 
 <div id="main">
@@ -23,6 +22,4 @@
   </div>
 </div>
 
-<?php 
-	include '../view/footer.php';
-?>
+<?php include("../view/footer.php"); ?>
