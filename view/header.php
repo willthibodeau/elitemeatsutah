@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="../../js/jquery-1.11.1.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div class="pageWrapper">

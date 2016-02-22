@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # reCAPTCHA PHP client library
 
 [![Build Status](https://travis-ci.org/google/recaptcha.svg)](https://travis-ci.org/google/recaptcha)
@@ -111,3 +112,48 @@ The major changes in 1.1.0 are:
 We accept contributions via GitHub Pull Requests, but all contributors need to
 be covered by the standard Google Contributor License Agreement. You can find
 instructions for this in [CONTRIBUTING](CONTRIBUTING.md)
+=======
+
+**Easy jQuery PHP Captcha**
+
+=============================================================
+
+Setup a Captcha in seconds.
+
+- Integrated with jQuery Validate plugin
+- Use custom fonts
+- Unique secure back-end generated captcha (PHP)
+- No reCaptcha pain.
+
+=============================================================
+
+**Demo**
+
+http://jquery4u.com/demos/easy-jquery-php-captcha/
+
+Powered by: jQuery, jQuery.validate, Require.js, Backbone.js, Bootstrap
+
+=============================================================
+
+**Download**
+
+https://github.com/sdeering/easy-jquery-php-captcha
+
+=============================================================
+
+**Setup**
+
+http://jquery4u.com/validation/easy-jquery-php-captcha/
+
+=============================================================
+
+**Credits**
+
+jQuery4u
+
+Sam Deering
+
+99points
+
+=============================================================
+>>>>>>> ff3645d97da405c2f14dff8985f4cb2972320bf5
