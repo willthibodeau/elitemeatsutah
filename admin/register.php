@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include '../view/header.php'; ?>
 <main>
     <form action="." method="post" >
     <fieldset>
@@ -31,4 +31,4 @@
     </fieldset>
     </form>
 </main>
-<?php include 'footer.php'; ?>
+<?php include '../view/footer.php'; ?>

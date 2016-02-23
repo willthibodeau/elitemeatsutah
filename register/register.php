@@ -14,10 +14,10 @@
                value="<?php echo htmlspecialchars($last_name);?>">
         <?php echo $fields->getField('last_name')->getHTML(); ?><br>
 
-        <label>Phone:</label>
-        <input type="text" name="phone" 
-               value="<?php echo htmlspecialchars($phone);?>">
-        <?php echo $fields->getField('phone')->getHTML(); ?><br>
+        <label>Password:</label>
+        <input type="text" name="password" 
+               value="<?php echo htmlspecialchars($password);?>">
+        <?php echo $fields->getField('password')->getHTML(); ?><br>
 
         <label>E-Mail:</label>
         <input type="text" name="email" 

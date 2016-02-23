@@ -1,13 +1,14 @@
 <?php
 require_once('fields.php');
 require_once('validate.php');
+include'functions.php';
 
 // Add fields with optional initial message
 $validate = new Validate();
 $fields = $validate->getFields();
 $fields->addField('first_name');
 $fields->addField('last_name');
-$fields->addField('phone', 'Use 888-555-1234 format.');
+$fields->addField('password', 'Use new format.');
 $fields->addField('email', 'Must be a valid email address.');
 
 $action = filter_input(INPUT_POST, 'action');
@@ -22,7 +23,7 @@ switch ($action) {
         // Reset values for variables
         $first_name = '';
         $last_name = '';
-        $phone = '';
+        $password = '';
         $email = '';
 
         // Load view
@@ -32,15 +33,16 @@ switch ($action) {
         // Copy form values to local variables
         $first_name = trim(filter_input(INPUT_POST, 'first_name'));
         $last_name = trim(filter_input(INPUT_POST, 'last_name'));
-        $phone = trim(filter_input(INPUT_POST, 'phone'));
+        $password = trim(filter_input(INPUT_POST, 'password'));
         $email = trim(filter_input(INPUT_POST, 'email'));
 
         // Validate form data
         $validate->text('first_name', $first_name);
         $validate->text('last_name', $last_name);
-        $validate->phone('phone', $phone);
+        $validate->password('password', $password);
         $validate->email('email', $email);
 
+        add_admin($first_name, $last_name, $email, $password)
         // Load appropriate view based on hasErrors
         if ($fields->hasErrors()) {
             include 'register.php';

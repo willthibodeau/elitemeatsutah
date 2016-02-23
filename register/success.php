@@ -6,7 +6,7 @@
     <ul>
         <li>First Name: <?php echo htmlspecialchars($first_name); ?></li>
         <li>Last Name: <?php echo htmlspecialchars($last_name); ?></li>
-        <li>Phone: <?php echo htmlspecialchars($phone); ?></li>
+        <li>Password: <?php echo htmlspecialchars($password); ?></li>
         <li>Email: <?php echo htmlspecialchars($email); ?></li>
     </ul>
 </main>
