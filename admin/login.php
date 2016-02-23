@@ -14,7 +14,7 @@
                 <input type="password" class="text" name="password">
                 <br>
 
-                <div class="g-recaptcha" data-sitekey="6LetABkTAAAAACmdS-ESNR0nkILojt1W0PAOAJWR"></div>
+               
 
                 <label>&nbsp;</label>
                 <input type="submit" value="Login">

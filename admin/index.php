@@ -12,7 +12,7 @@ if ($action == NULL) {
         $action = 'show_admin_menu';
     }
 }
-var_dump($_POST);
+
 
 // If the user isn't logged in, force the user to login
 if (!isset($_SESSION['is_valid_admin'])) {
@@ -33,9 +33,11 @@ switch($action) {
         }
         break;
     case 'show_admin_menu':
+
         include('protected.php');
         break;
     case 'show_product_manager':
+    
         include('product_manager.php');
         break;
     case 'show_category_manager':

@@ -1,5 +1,4 @@
 <?php require_once('valid_admin.php'); ?>
-
 <?php include('../view/header.php'); ?>
 
 <h1>Product Manager</h1>

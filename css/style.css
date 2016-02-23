@@ -52,7 +52,9 @@ body {
 }
 
 header {
-	background: #E8ADA0; /* Old browsers */
+	background: url("../images/wood.jpg") ; 
+	background-repeat: no-repeat;
+	background-size: 100%;
 	padding-bottom: 30px;
 }
 
