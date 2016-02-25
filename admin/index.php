@@ -13,11 +13,10 @@ if ($action == NULL) {
     }
 }
 
-
 // If the user isn't logged in, force the user to login
 if (!isset($_SESSION['is_valid_admin'])) {
     $action = 'login';
-}
+} 
 
 // Perform the specified action
 switch($action) {
@@ -25,7 +24,8 @@ switch($action) {
         $email = filter_input(INPUT_POST, 'email');
         $password = filter_input(INPUT_POST, 'password');
         if (is_valid_admin_login($email, $password)) {
-            $_SESSION['is_valid_admin'] = true;
+            $_SESSION['is_valid_admin'] = true;     
+            $login_message = "Welcome Will";
             include('protected.php');
         } else {
             $login_message = 'You must login to view this page.';
@@ -33,15 +33,19 @@ switch($action) {
         }
         break;
     case 'show_admin_menu':
-
         include('protected.php');
         break;
-    case 'show_product_manager':
-    
-        include('product_manager.php');
+    case 'show_account':
+        include('account/index.php');
         break;
-    case 'show_category_manager':
-        include('category_manager.php');
+    case 'show_category':
+        include('category/index.php');
+        break;
+    case 'show_comment':
+        include('comment/index.php');
+        break;
+    case 'show_product':
+        include('product/index.php');
         break;
     case 'logout':
         $_SESSION = array();   // Clear all session data from memory

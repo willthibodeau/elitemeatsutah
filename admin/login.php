@@ -1,6 +1,8 @@
 
 <?php include('../view/header.php'); ?>
         <main>
+ 
+    
             <h1>Login</h1>
 
             <form action="." method="post" id="login_form" class="aligned">
@@ -14,12 +16,12 @@
                 <input type="password" class="text" name="password">
                 <br>
 
-               
-
                 <label>&nbsp;</label>
                 <input type="submit" value="Login">
             </form>
 
             <p><?php echo $login_message; ?></p>
+     
+
         </main>
 <?php include('../view/footer.php'); ?>

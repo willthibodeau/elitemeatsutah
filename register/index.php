@@ -42,7 +42,7 @@ switch ($action) {
         $validate->password('password', $password);
         $validate->email('email', $email);
 
-        add_admin($first_name, $last_name, $email, $password)
+        add_admin($first_name, $last_name, $email, $password);
         // Load appropriate view based on hasErrors
         if ($fields->hasErrors()) {
             include 'register.php';

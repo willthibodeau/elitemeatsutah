@@ -59,7 +59,7 @@ class Validate {
         }
     }
 
-    public function phone($name, $value, $required = false) {
+    public function password($name, $value, $required = false) {
         $field = $this->fields->getField($name);
 
         // Call the text method and exit if it yields an error
@@ -67,8 +67,8 @@ class Validate {
         if ($field->hasError()) { return; }
 
         // Call the pattern method to validate a phone number
-        $pattern = '/^[[:digit:]]{3}-[[:digit:]]{3}-[[:digit:]]{4}$/';
-        $message = 'Invalid phone number.';
+        $pattern = '/^[a-zA-Z][0-9a-zA-Z_!$@#^&]{5,20}$/';
+        $message = 'Length between 5 and 20 start with a character.';
         $this->pattern($name, $value, $pattern, $message, $required);
     }
 
