@@ -1,4 +1,5 @@
 <?php
+echo 'category/index.php';
 require('../../model/database.php');
 require('../../model/product_db.php');
 require('../../model/category_db.php');
@@ -16,10 +17,18 @@ if ($action == 'list_products') {
             FILTER_VALIDATE_INT);
     if ($category_id == NULL || $category_id == FALSE) {
         $category_id = 1;
+        if($category_id == 1){
+            echo" you have a category id";
+        }else{
+            echo"you dont have a category id";
+        }
+       
     }
     $categories = get_categories();
+    print_r($categories);
     $category_name = get_category_name($category_id);
-    $products = get_products_by_category($category_id);
+    print_r($category_name);
+    // $products = get_products_by_category($category_id);
     include('category_list.php');
 
 } else if ($action == 'add_categories'){

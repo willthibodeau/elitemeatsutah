@@ -1,6 +1,7 @@
 <?php 
 // require_once('../valid_admin.php'); 
 include('../../view/header.php');
+include('../../model/category_db.php');
 ?>
 <main>
     <aside>
