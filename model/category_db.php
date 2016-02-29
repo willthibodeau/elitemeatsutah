@@ -48,7 +48,7 @@ function get_category_name($category_id) {
     return $category_name;
 }
 
-// check for existing room name
+// check for existing category name
 function detect_category_name($name){
 	global $db;
 	$sql = "Select cat_categoryName from categories where cat_categoryName = '$name'";
@@ -59,6 +59,20 @@ function detect_category_name($name){
 		} else {
 			add_categories($name);
 		}
+}
+
+function delete_category($category_id) {
+    global $db;
+    $query = 'DELETE FROM categories WHERE categoryID = :category_id';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':category_id', $category_id);
+        $statement->execute();
+        $statement->closeCursor();
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
 }
 
 ?>

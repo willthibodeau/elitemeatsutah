@@ -13,6 +13,7 @@ $debug = true;
 
 	try {
 		$db = new PDO($dsn, $username, $password);
+		echo ':  you are connected to the database  :';
 	} catch (PDOException $e) {
 		echo 'please correct the database connection error';
 		exit();

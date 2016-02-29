@@ -1,7 +1,7 @@
 <?php
-	include '../view/header.php';
-	require'../model/database.php';
-
+require_once('../util/main.php');
+	
+require_once('../model/database.php');
 	
 
 	$query = 'SELECT * FROM categories order by cat_categoryID';
@@ -11,6 +11,7 @@
 	$statement1->closeCursor();
 
 ?>
+<?php include('../view/header.php'); ?>
 	<div class="contentWrapper">
 		<div class="columnWrapper">
 			<article class="main">

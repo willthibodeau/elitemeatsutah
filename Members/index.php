@@ -1,20 +1,15 @@
-<?php
-	include '../view/header.php';
+
+<?php 
+require_once('../util/main.php');
+  include '../view/header.php';
 ?>
-	<?php require_once("session.php"); ?>
-<?php require_once("functions.php"); ?>
-<?php confirm_logged_in(); ?>
-
-<?php $layout_context = "admin"; ?>
-
-
 <div id="main">
   <div id="navigation">
     &nbsp;
   </div>
   <div id="page">
     <h2>Admin Menu</h2>
-    <p>Welcome to the admin area, <?php echo htmlentities($_SESSION["username"]); ?>.</p>
+   
     <ul>
       <li><a href="manage_content.php">Manage Website Content</a></li>
       <li><a href="manage_admins.php">Manage Admin Users</a></li>
