@@ -1,28 +1,35 @@
-
 <?php
 require_once('../../util/main.php');
-require_once('util/secure_conn.php');
-require_once('util/valid_admin.php');
+require_once('../../model/category_db.php');
+require_once('../valid_admin.php');
 
-require_once('model/admin_db.php');
-require_once('model/product_db.php');
-require_once('model/category_db.php');
 
-$action = strtolower(filter_input(INPUT_POST, 'action'));
-if ($action == NULL) {
-    $action = strtolower(filter_input(INPUT_GET, 'action'));
-    if ($action == NULL) {        
-        $action = 'list_categories';
+$action = filter_input(INPUT_POST, 'action');
+
+        $action = 'list_products';
+
+        // $action = strtolower(filter_input(INPUT_POST, 'action'));
+// if ($action == NULL) {
+//     $action = strtolower(filter_input(INPUT_GET, 'action'));
+//     if ($action == NULL) {        
+//         $action = 'list_categories';
+//     }
+// }
+
+
+switch($action){  
+    case 'list_products':
+   $category_id = filter_input(INPUT_GET, 'category_id', 
+            FILTER_VALIDATE_INT);
+    if ($category_id == NULL || $category_id == FALSE) {
+        $category_id = 1;
     }
-}
-
-switch ($action) {
-    case 'list_categories':
-        $categories = get_categories();
-
-        include('category_list.php');
-        break;
-    case 'delete_category':
+    $categories = get_categories();
+    $category_name = get_category_name($category_id);
+    
+    include('category_list.php');
+    break;
+  case 'delete_category':
         $category_id = filter_input(INPUT_POST, 'category_id', 
                 FILTER_VALIDATE_INT);
 
@@ -59,5 +66,4 @@ switch ($action) {
         header("Location: .");
         break;
 }
-
 ?>

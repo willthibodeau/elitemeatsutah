@@ -1,32 +1,34 @@
-<?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
-<main>
+<?php 
+echo'category_list ';
+include('../view/header.php');
 
-    <h1>Category Manager</h1>
-    <table id="category_table">
+?>
+
+
+<table id="category_table">
         <?php foreach ($categories as $category) : ?>
         <tr>
             <form action="." method="post" >
             <td>
                  <input type="text" name="name"
-                        value="<?php echo htmlspecialchars($category['categoryName']); ?>">
+                        value="<?php echo htmlspecialchars($category['cat_categoryName']); ?>">
             </td>
             <td>
                 <input type="hidden" name="action" value="update_category">
                 <input type="hidden" name="category_id"
-                       value="<?php echo $category['categoryID']; ?>">
+                       value="<?php echo $category['cat_categoryID']; ?>">
                 <input type="submit" value="Update">
             </td>
             </form>
             <td>
-                <?php if ($category['productCount'] == 0) : ?>
-                <form action="." method="post" >
+               
+                <form action="#" method="post" >
                     <input type="hidden" name="action" value="delete_category">
                     <input type="hidden" name="category_id"
-                           value="<?php echo $category['categoryID']; ?>">
+                           value="<?php echo $category['cat_categoryID']; ?>">
                     <input type="submit" value="Delete">
                 </form>
-                <?php endif; ?>
+                
             </td>
         </tr>
         <?php endforeach; ?>
@@ -39,5 +41,4 @@
         <input type="submit" value="Add">
     </form>
 
-</main>
-<?php include 'view/footer.php'; ?>
+<?php include('../view/footer.php');
